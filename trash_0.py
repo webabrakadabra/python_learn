@@ -1,8 +1,7 @@
-def summa(*args: float) -> float:
-    s = 0
-    for el in args:
-        s = el + s
-    return s
+from classes import Dog
 
 
-print(summa(1, 2.2))
+dog1 = Dog(1, 'jim')
+dog2 = Dog(2, 'jooom')
+
+print(dir(dog1))
