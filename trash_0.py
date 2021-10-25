@@ -1,7 +1,9 @@
-from classes import Dog
+from sys import argv
 
+script, file = argv
+file_open = open(file)
+print(file_open.read())
 
-dog1 = Dog(1, 'jim')
-dog2 = Dog(2, 'jooom')
-
-print(dir(dog1))
+file_again = input()
+file_again_open = open(file_again)
+print(file_again_open.read())
