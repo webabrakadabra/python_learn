@@ -1,9 +1,12 @@
-from sys import argv
+class Counter:
+    def start_from(self, num=0):
+        self.num = num
 
-script, file = argv
-file_open = open(file)
-print(file_open.read())
+    def increment(self):
+        self.num += 1
 
-file_again = input()
-file_again_open = open(file_again)
-print(file_again_open.read())
+    def display(self):
+        print(f"Текущее значение счетчика = {self.num}")
+
+    def reset(self):
+        self.num = 0
