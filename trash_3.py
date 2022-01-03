@@ -13,3 +13,4 @@ class SoccerPlayer:
 
     def statistics(self):
         print(f'{self.surname} {self.name} - голы: {self.goals}, передачи: {self.assists}')
+
