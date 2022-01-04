@@ -1,11 +1,28 @@
-class Point:
-    def set_coordinates(self, x, y):
-        self.x = x
-        self.y = y
+class Stack:
+    def __init__(self):
+        self.values = []
 
-    def get_distance(self, val):
-        if isinstance(val, Point):
-            x = ((self.x - val.x)**2 + (self.y - val.y)**2)**0.5
-            return x
+    def push(self, item):
+        self.values.append(item)
+
+    def pop(self):
+        if self.is_empty():
+            print("Empty Stack")
         else:
-            print("Передана не точка")
+            del self.values[-1]
+
+    def peek(self):
+        if self.is_empty():
+            print("Empty Stack")
+            return None
+        else:
+            return self.values[-1]
+
+    def is_empty(self):
+        if self.size() == 0:
+            return True
+        else:
+            return False
+
+    def size(self):
+        return len(self.values)
