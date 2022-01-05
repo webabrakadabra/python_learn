@@ -9,7 +9,7 @@ class Stack:
         if self.is_empty():
             print("Empty Stack")
         else:
-            del self.values[-1]
+            return self.values.pop(-1)
 
     def peek(self):
         if self.is_empty():
@@ -19,7 +19,7 @@ class Stack:
             return self.values[-1]
 
     def is_empty(self):
-        if self.size() == 0:
+        if not self.size():
             return True
         else:
             return False
