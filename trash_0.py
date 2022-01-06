@@ -1,10 +1,12 @@
-class Dog:
-    def __init__(self, name, age):
-        self.name = name
-        self.age = age
+class Counter:
+    def start_from(self, num=0):
+        self.num = num
 
-    def description(self):
-        return f"{self.name} is {self.age} years old"
+    def increment(self):
+        self.num += 1
 
-    def speak(self, sound):
-        return f"{self.name} says {sound}"
+    def display(self):
+        print(f"Текущее значение счетчика = {self.num}")
+
+    def reset(self):
+        self.num = 0
