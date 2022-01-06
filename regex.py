@@ -7,7 +7,13 @@ import re
 resmatch = re.match(r'Python', 'Python11111 is good')
 print(resmatch)
 
-# search - метод, який на відміну від mathc шукає по всьому рядку. Якщо не знайдено метод поверне None
+# search - метод, який на відміну від match шукає по всьому рядку перше співпадіння з pattern.
+# Якщо не знайдено метод поверне None
 
 ressearch = re.search(r"Python", "Me is Python")
 print(ressearch)
+
+#findall - шукає всі співпадіння в str по вказаному pattern
+
+resfindall = re.findall(r"Python", "My Python is bis Python")
+print(resfindall)
