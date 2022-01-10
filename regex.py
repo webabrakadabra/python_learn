@@ -46,7 +46,7 @@ print(re.search(r"a\d", "ab1"))  #None
 print(re.search(r"\s", " "))  #<re.Match object; span=(0, 1), match=' '>
 print(re.search(r"\s", "1"))  #None
 
-### \w - букви та _
+### \w - букви, цифри та _
 print(re.search(r"\w", "sadfas"))  #<re.Match object; span=(0, 1), match='s'>
 print(re.search(r"\w", "_"))  #<re.Match object; span=(0, 1), match='_'>
 
