@@ -74,7 +74,9 @@ print(re.search(r"^123", "a123a"))  #None
 print(re.search(r"123$", "a123"))  #<re.Match object; span=(1, 4), match='123'>
 print(re.search(r"123$", "a1223"))  #None
 
-### [] - один любий символ із вказаних в скобках
+### [] - один любий символ із вказаних в скобках, або діапазон
 print(re.search(r"[123]", "adfasfa1"))  #<re.Match object; span=(7, 8), match='1'>
 print(re.search(r"[123]", "adfasfa123"))  #<re.Match object; span=(7, 8), match='1'>
 print(re.search(r"[ ]", "adfasfa123"))  #None
+print(re.search(r"[1-5]", "adfasfa193"))  #<re.Match object; span=(7, 8), match='1'>
+print(re.search(r"[a-v]", "adfasfa193"))  #<re.Match object; span=(0, 1), match='a'>
