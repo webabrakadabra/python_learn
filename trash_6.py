@@ -1,10 +1,6 @@
-regex_pattern = r"."	# Do not delete 'r'.
-
+pattern = r'[[1][2][3]][120][xs0][30Aa][xsu][.,]$'	# Do not delete 'r'.
+sting = '1000u.'
 import re
-import sys
 
-test_string = "abcabcabcabcxxx"
 
-match = re.match(regex_pattern, test_string) is not None
-
-print(str(match).lower())
+print(str(bool(re.search(pattern, sting))).lower())
