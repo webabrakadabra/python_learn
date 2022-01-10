@@ -34,3 +34,4 @@ print(redot)  #<re.Match object; span=(0, 2), match='a'>
 print(re.search("a.b", "a+b"))  #<re.Match object; span=(0, 3), match='a+b'>
 print(re.search("a.b", "ab"))  #None
 print(re.search("a.b.c", "a-b=c"))  #<re.Match object; span=(0, 5), match='a-b=c'>
+print(re.search("a.b.c", "a-bc"))  #None
