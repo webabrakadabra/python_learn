@@ -48,7 +48,7 @@ print(re.search("\s", "1"))  #None
 
 ### \w - букви та _
 print(re.search("\w", "sadfas"))  #<re.Match object; span=(0, 1), match='s'>
-print(re.search("\w", "_")  #<re.Match object; span=(0, 1), match='_'>
+print(re.search("\w", "_")) #<re.Match object; span=(0, 1), match='_'>
 
 ### \D - все що завгодно, але не \d(цифра)
 print(re.search("\D", "@@"))  #<re.Match object; span=(0, 1), match='@'>
