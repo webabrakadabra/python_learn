@@ -65,3 +65,16 @@ print(re.search(r"\W", "1"))  #None
 print(re.search(r"\W", "_"))  #None
 print(re.search(r"\W", "ю"))  #None
 print(re.search(r"\W", "\n"))  #<re.Match object; span=(0, 1), match='\n'>
+
+### ^ - початок рядка
+print(re.search(r"^123", "123a"))  #<re.Match object; span=(0, 3), match='123'>
+print(re.search(r"^123", "a123a"))  #None
+
+### $ - кінець рядка
+print(re.search(r"123$", "a123"))  #<re.Match object; span=(1, 4), match='123'>
+print(re.search(r"123$", "a1223"))  #None
+
+### [] - один любий символ із вказаних в скобках
+print(re.search(r"[123]", "adfasfa1"))  #<re.Match object; span=(7, 8), match='1'>
+print(re.search(r"[123]", "adfasfa123"))  #<re.Match object; span=(7, 8), match='1'>
+print(re.search(r"[ ]", "adfasfa123"))  #None
