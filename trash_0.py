@@ -1,12 +1,4 @@
-class Counter:
-    def start_from(self, num=0):
-        self.num = num
+import re
 
-    def increment(self):
-        self.num += 1
-
-    def display(self):
-        print(f"Текущее значение счетчика = {self.num}")
-
-    def reset(self):
-        self.num = 0
+Regex_Pattern = r'^[\D][A-Zbcdfghjklmnpqrstvwxyz][ad-zABCEG-Z][\S][a-zBCDFGHJKLMNPQRSTVWXYZ][^.,]'	 # Do not delete 'r'.
+print(str(bool(re.search(Regex_Pattern, input()))).lower())
