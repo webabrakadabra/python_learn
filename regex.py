@@ -107,4 +107,5 @@ print(re.search(r"a\d?b", "a5b"))  #<re.Match object; span=(0, 3), match='a5b'>
 ### \b - слово яке заключене між \b
 print(re.search(r"\bIvan\b", "Privet Ivan"))  #<re.Match object; span=(7, 11), match='Ivan'>
 
-### ()
+### () - група символів
+print(re.search(r"^4(a|b)", "4ab"))  #<re.Match object; span=(0, 2), match='4a'>
