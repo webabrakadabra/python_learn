@@ -87,7 +87,7 @@ print(re.search(r"[^abc]", "dom"))  #<re.Match object; span=(0, 1), match='d'>
 
 ### {} - квантифікатор, кількість повторень; {,5} - кількість повторень від 0 до 5; {4,} - від 4 і більше
 print(re.search(r"a{5}", "aaaaa"))  #<re.Match object; span=(0, 5), match='aaaaa'>
-print(re.search(r"a{5}", "aaaa")  #None
+print(re.search(r"a{5}", "aaaa"))  #None
 print(re.findall(r"\d{4}", "11, 2345, 334455"))  #['2345', '3344']
 
 
