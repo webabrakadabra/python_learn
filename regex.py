@@ -80,3 +80,31 @@ print(re.search(r"[123]", "adfasfa123"))  #<re.Match object; span=(7, 8), match=
 print(re.search(r"[ ]", "adfasfa123"))  #None
 print(re.search(r"[1-5]", "adfasfa193"))  #<re.Match object; span=(7, 8), match='1'>
 print(re.search(r"[a-v]", "adfasfa193"))  #<re.Match object; span=(0, 1), match='a'>
+
+### [^abc] - все окрім вказаного в скобках
+print(re.search(r"[^abc]", "abba"))  #None
+print(re.search(r"[^abc]", "dom"))  #<re.Match object; span=(0, 1), match='d'>
+
+### {} - квантифікатор, кількість повторень; {,5} - кількість повторень від 0 до 5; {4,} - від 4 і більше
+print(re.search(r"a{5}", "aaaaa"))  #<re.Match object; span=(0, 5), match='aaaaa'>
+print(re.search(r"a{5}", "aaaa")  #None
+print(re.findall(r"\d{4}", "11, 2345, 334455"))  #['2345', '3344']
+
+
+### * - символ перед * може повторюватися від 0 і більше раз
+print(re.search(r"a\d*b", "a5555b"))  #<re.Match object; span=(0, 6), match='a5555b'>
+print(re.search(r"a\d*b", "ab"))  #<re.Match object; span=(0, 2), match='ab'>
+
+### + символ перед + може повторюватися 1 і більше разів
+print(re.search(r"a\d+b", "a5555b"))  #<re.Match object; span=(0, 6), match='a5555b'>
+print(re.search(r"a\d+b", "ab"))  #None
+
+### ? символ перед ? може повторюватися 0 або 1 разів
+print(re.search(r"a\d?b", "a5555b"))  #None
+print(re.search(r"a\d?b", "ab"))  #<re.Match object; span=(0, 2), match='ab'>
+print(re.search(r"a\d?b", "a5b"))  #<re.Match object; span=(0, 3), match='a5b'>
+
+### \b - слово яке заключене між \b
+print(re.search(r"\bIvan\b", "Privet Ivan"))  #<re.Match object; span=(7, 11), match='Ivan'>
+
+### ()
