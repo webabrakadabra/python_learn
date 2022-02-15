@@ -1,4 +1,15 @@
-import re
+class Cat:
+    count = 0
+    def __init__(self, name='NoName', age=1):
+        self.change_name(name)
+        self.change_age(age)
+        Cat.count = Cat.count + 1
 
-Regex_Pattern = r'^[(Mr.)(Mrs.)(Ms.)(Dr.)(Er.)][a-zA-Z]+'
-print(str(bool(re.search(Regex_Pattern, input()))).lower())
+    def change_name(self, name):
+        self.name = name
+
+    def change_age(self, age):
+        self.age = age
+
+    def print_count(self):
+        print(Cat.count)
